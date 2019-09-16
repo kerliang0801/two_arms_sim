@@ -94,7 +94,7 @@ catkin_make
 
 There are three ros executables in total := moveit_example.cpp (GENERATING TRAJECTORY from moveit & STORING to DB), mongodb_extract.cpp (EXTRACTING TRAJECTORY from DB AND SENDING TO ACTION SERVER) and test.cpp (FOR TESTING SHIT for my own purposes).
 
-#### Generating and storing a trajectory
+### 1. Generating and storing a trajectory
 
 Launch moveIt! & rviz in terminal A:
 
@@ -117,7 +117,7 @@ rosrun two_arms_sim moveit_example
 You should see the arm move in Rviz and in the end, the terminal should confirm the storing of a trajectory to your DB.
 
 
-#### Extracting and sending goal request to action server
+### 2. Extracting and sending goal request to action server
 
 Remember to close your previously opened RViz.
 
@@ -146,7 +146,7 @@ rosrun two_arms_sim mongodb_extract
 Enjoy the two arms move relentlessly as it hits the ground in sequence!
 
 
-#### To run test.cpp
+### 3.To run test.cpp
 
 test.cpp just sends a manually scripted trajectory path to the arms' action server.
 
