@@ -43,10 +43,15 @@ target_link_libraries(two_arms_sim PRIVATE
   ${catkin_LIBRARIES}
 )
 #------------------------------------------------------------------------------
-add_executable(moveit_example src/moveit_example.cpp)
+add_executable(moveit_example src/moveit_example.cpp src/arm_traj_controller.cpp)
 target_link_libraries(moveit_example ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 install(TARGETS moveit_example DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 #------------------------------------------------------------------------------
+add_executable(mongodb_extract src/mongodb_extract.cpp src/arm_traj_controller.cpp)
+target_link_libraries(mongodb_extract ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+install(TARGETS mongodb_extract DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+#------------------------------------------------------------------------------
+
 target_include_directories(two_arms_sim PRIVATE
   ${catkin_INCLUDE_DIRS}
 )

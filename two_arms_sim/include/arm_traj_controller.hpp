@@ -1,3 +1,8 @@
+
+#ifndef ARM_TRAJ_CONTROLLER
+#define ARM_TRAJ_CONTROLLER
+
+
 #include "mongodb_store/message_store.h"
 #include "geometry_msgs/Pose.h"
 #include <control_msgs/FollowJointTrajectoryAction.h>
@@ -40,3 +45,5 @@ class arm_traj_controller{
     // Returns the current state of the action
     actionlib::SimpleClientGoalState getState();
 };
+
+#endif

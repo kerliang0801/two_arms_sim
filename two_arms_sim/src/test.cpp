@@ -97,7 +97,7 @@ int main(int argc, char **argv)
         }
 
         results.clear();
-        // Need to delete ID.
+        
         if(messageStore.queryID<control_msgs::FollowJointTrajectoryGoal>(id, results)) {
 
                 BOOST_FOREACH( boost::shared_ptr<control_msgs::FollowJointTrajectoryGoal> goal,  results)
