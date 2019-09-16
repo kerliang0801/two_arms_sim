@@ -160,7 +160,7 @@ roslaunch two_arms_sim main.launch
 roslaunch mongodb_store mongodb_store.launch db_path:=<path_to_your_db_dir>
 ```
 
-Run the executable,
+Run the executable in Terminal C,
 
 ```
 rosrun two_arms_sim two_arms_sim
